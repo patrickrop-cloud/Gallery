@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+
 
 # Create your views here.
 def gallery(request):
     return render(request, 'photos/gallery.html')
 
-def viewPhoto(request):
+def viewPhoto(request, pk):
     return render(request, 'photos/photo.html')
 
 def addPhoto(request):
