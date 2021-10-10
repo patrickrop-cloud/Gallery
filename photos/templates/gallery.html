@@ -10,7 +10,7 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                       <a href="{% url 'gallery' %}">All</a> 
+                       <a href="{% url 'gallery' %}">All Categories</a> 
                     </li>
                     {% for category in categories %}
                     <li class="list-group-item">
@@ -21,8 +21,7 @@
                         
                     </li>
                     {%endfor%}
-                        <!-- <a href="{% url 'add'%}" class="btn btn-dark" >Add Photo</a> -->
-                    
+                        
 
                 </ul>
             </div>
@@ -42,19 +41,19 @@
                 <div class=" col-sm-4 col-md-4 col-lg-4">
                     <div class="card my-2 ">
                         <a style="text-decoration: none;" href="{%url 'photo' photo.id %}" class="btn btn-outline-light btn-sm m-1">
-                            <img class="image-thumbail"
-                            src="{{ photo.image.url}}"
-                            width="100px" alt="Card image cap"></a>
-
-                        
+                            <img class="image-thumbail"src="{{ photo.image.url}}"height="100%" width="100%" alt="None"></a>
+      
                         <div class="card-body">
                             <small>Category:{{photo.category.category_name}}</small>
                         </div>
-
+                        <!-- <div><a href="{% url 'photo'  photo.id %}"class="btn btn-outline-success">View</a></div> -->
+                        <div class="btn-group-lg badge-light" >
+                            <a href="{% url 'photo'  photo.id %}"class="btn btn-outline-success"style="justify-content: center;">View Photo</a>
+                        </div>
                     </div>
                 </div>
                 {% empty %}
-                <h2>No photos ....</h2>
+                <h1>No photos Uploaded...</h1>
                 {% endfor %}
             </div>
         </div>
