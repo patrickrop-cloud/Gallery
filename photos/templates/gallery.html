@@ -3,30 +3,26 @@
 {{block.super}}
 <div class="container" style="background-color:aquamarine;">
     <div class="row">
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-header">
+        <div class="col-md-3" >
+            <div class="card my-2">
+                <div class="card-header ">
                      Categories
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
+                    <!-- <li class="list-group-item">
                        <a href="{% url 'gallery' %}">All Categories</a> 
-                    </li>
+                    </li> -->
                     {% for category in categories %}
                     <li class="list-group-item">
                         <a href="{% url 'gallery' %}?category={{category.category_name}}">
                             {{category.category_name}}
                             {{category.location_name}}
                         </a>
-                        
                     </li>
-                    {%endfor%}
-                        
-
+                    {%endfor%}         
                 </ul>
             </div>
         </div>
-
         <style>
             .image-thumbail{
                height: 150px; 
@@ -54,8 +50,6 @@
                 {% endfor %}
             </div>
         </div>
-        
-
     </div>
 </div>
 {% endblock %}
