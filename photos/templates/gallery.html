@@ -1,7 +1,7 @@
 {%extends 'base.html'%}
 {% block content %}
 {{block.super}}
-<div class="container">
+<div class="container" style="background-color:aquamarine;">
     <div class="row">
         <div class="col-md-3">
             <div class="card">
@@ -29,8 +29,8 @@
 
         <style>
             .image-thumbail{
-               height: 200px; 
-               width: 200px;
+               height: 150px; 
+               width: 150px;
                overflow: cover;
             }
         </style>
@@ -46,10 +46,7 @@
                         <div class="card-body">
                             <small>Category:{{photo.category.category_name}}</small>
                         </div>
-                        <!-- <div><a href="{% url 'photo'  photo.id %}"class="btn btn-outline-success">View</a></div> -->
-                        <div class="btn-group-lg badge-light" >
-                            <a href="{% url 'photo'  photo.id %}"class="btn btn-outline-success"style="justify-content: center;">View Photo</a>
-                        </div>
+                            <a href="{% url 'photo'  photo.id %}"class="btn btn-outline-light badge-dark"style="justify-content: center;">View Photo</a>   
                     </div>
                 </div>
                 {% empty %}
