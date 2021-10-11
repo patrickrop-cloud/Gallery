@@ -18,12 +18,14 @@ Python3
 Django and bootstrap4 postgres db HTML
 
 #Dependencies
-
+bootstrap3
+django3.2
+postgres db
 
 #Support and contact details
 In case of any issues,and questions, contact me through; Github: https://github.com/patrickrop-cloud Twitter: @patohrop09
 
-License
+#License
 This project is under;
 
 MIT license
