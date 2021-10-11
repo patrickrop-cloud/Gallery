@@ -21,6 +21,7 @@ Django and bootstrap4 postgres db HTML
 bootstrap3
 django3.2
 postgres db
+cloudinary
 
 # Support and contact details
 In case of any issues,and questions, contact me through; Github: https://github.com/patrickrop-cloud Twitter: @patohrop09
