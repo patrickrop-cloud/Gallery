@@ -31,6 +31,7 @@ class ImageTestClass(TestCase):
         expected_image=f'{new_image}'
         self.assertTrue(expected_image,'new_image')
 
+    #Test to search for category
     def test_search_category(self):
         category=Image.objects.all()
         search_term='business'
@@ -50,10 +51,13 @@ class CategoryTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.adventure,Category))
 
+    #Test to save categories
     def test_save_categories(self):
         self.adventure.save_categories()
         category=Category.objects.all()
         self.assertTrue(len(category)>0)
+
+    #Test to delete categories
     def test_delete_categories(self):
         self.adventure.save_categories()
         category_record=Category.objects.all()
@@ -69,11 +73,12 @@ class LocationTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.nairobi,Location))
 
+    #Test to save location
     def test_save_location(self):
         self.nairobi.save_location()
         location=Location.objects.all()
         self.assertTrue(len(location)>0)
-
+    #Test to delete location
     def test_delete_location(self):
         self.nairobi.save_location()
         location_record=Location.objects.all()
