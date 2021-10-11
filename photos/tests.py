@@ -33,7 +33,7 @@ class ImageTestClass(TestCase):
 
     def test_search_category(self):
         category=Image.objects.all()
-        search_term='food'
+        search_term='business'
         db_term=search_term
         if db_term !=search_term:
             return('no match')
@@ -44,19 +44,40 @@ class CategoryTestClass(TestCase):
     
     #setup method
     def setUp(self):
-        self.nature=Category(category_name="nature")
+        self.adventure=Category(category_name="photography")
     
     #Testing Instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.nature,Category))
+        self.assertTrue(isinstance(self.adventure,Category))
 
     def test_save_categories(self):
-        self.nature.save_categories()
+        self.adventure.save_categories()
         category=Category.objects.all()
         self.assertTrue(len(category)>0)
     def test_delete_categories(self):
-        self.nature.save_categories()
+        self.adventure.save_categories()
         category_record=Category.objects.all()
-        self.nature.delete_category()
+        self.adventure.delete_category()
         self.assertTrue(len(category_record)==0)
 
+class LocationTestClass(TestCase):
+    #setup method
+    def setUp(self):
+        self.nairobi=Location(location_name="Nairobi")
+
+    #Testing Instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nairobi,Location))
+
+    def test_save_location(self):
+        self.nairobi.save_location()
+        location=Location.objects.all()
+        self.assertTrue(len(location)>0)
+
+    def test_delete_location(self):
+        self.nairobi.save_location()
+        location_record=Location.objects.all()
+        self.nairobi.delete_location()
+        self.assertTrue(len(location_record)==0)
+
+    
